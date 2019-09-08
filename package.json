@@ -1,0 +1,44 @@
+{
+  "name": "vacations-management-automation",
+  "version": "1.0.0",
+  "description": "Test automation about vacations management application",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "test": "npm run build && protractor dist/protractor/config.js",
+    "test:headless": "npm run build && protractor dist/protractor/headless.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosv4150/vacations-management-automation.git"
+  },
+  "keywords": [
+    "automation",
+    "vacations",
+    "management"
+  ],
+  "author": "Carlos Vibanco <carlosv4150@hotmail.com> (carlosv4150)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosv4150/vacations-management-automation/issues"
+  },
+  "homepage": "https://github.com/carlosv4150/vacations-management-automation#readme",
+  "dependencies": {
+    "@types/chai": "^4.2.1",
+    "@types/cucumber": "^4.0.7",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "chai-smoothie": "^0.3.2",
+    "cucumber-html-reporter": "^5.0.2",
+    "node-random-name": "^1.0.1",
+    "protractor-cucumber-framework": "^6.1.3",
+    "typescript": "^3.6.2"
+  }
+}
