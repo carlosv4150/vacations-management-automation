@@ -9,14 +9,14 @@ export class UsersListPage{
     private employeesTab: ElementFinder;
 
     constructor () {
-        this.userLead = element(by.xpath('//td[contains(text(),"Carlos Vibancos")]'));
+        this.userLead = element(by.xpath('//td[contains(text(),"Carlos Vibanco")]'));
         this.createEmployeeLink = $('a[href^="/employees/new"]');
         this.employeesTab = $$('a[href^="/employees"]').get(0);
     }
 
     public isUserVisible(): promise.Promise<void> {
         const isPresent = EC.visibilityOf(this.userLead);
-        return browser.wait(isPresent, 5000);
+        return browser.wait(isPresent, 10000);
     }
 
     public async clickCreateNewEmployeeLink(): Promise<void> {
